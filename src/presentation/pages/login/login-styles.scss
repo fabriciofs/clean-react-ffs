@@ -1,13 +1,5 @@
 @import "../../styles//colors.scss";
 
-* {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-color: $background;
 }
@@ -61,19 +53,6 @@ button {
       cursor: pointer;
       &:hover {
         text-decoration: underline;
-      }
-    }
-
-    .errorWrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .spinner {
-        margin-top: 30px;
-      }
-      .error {
-        margin-top: 30px;
-        color: $primaryLight;
       }
     }
   }
