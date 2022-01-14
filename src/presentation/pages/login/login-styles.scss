@@ -1,21 +1,4 @@
-@import "../../styles//colors.scss";
-
-body {
-  background-color: $background;
-}
-
-button {
-  background-color: $primary;
-  color: $white;
-  border-radius: 8px;
-  font-size: 16px;
-  border: none;
-  line-height: 60px;
-
-  &:hover {
-    opacity: 0.9;
-  }
-}
+@import "../../styles/colors.scss";
 
 .login {
   display: flex;
