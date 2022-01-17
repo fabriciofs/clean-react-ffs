@@ -7,7 +7,7 @@ import Input from '@/presentation/components/input/input'
 import FormStatus from '@/presentation/components/form-status/form-status'
 import FormContext from '@/presentation/contexts/form/form-context'
 import { Validation } from '@/presentation/protocols/validation'
-import { Authentication } from '@/domain/usecases'
+import { Authentication } from '@/domain/usecases/authentication'
 
 type Props = {
   validation: Validation
