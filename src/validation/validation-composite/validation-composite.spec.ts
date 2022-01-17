@@ -9,14 +9,15 @@ const makeSut = (validators: FieldValidation[]): ValidationComposite => {
 
 describe('ValidationComposite', () => {
   test('Shoud return error if any validation fails', () => {
-    const fieldValidationSpy = new FieldValidationSpy('any_field')
+    const fieldValidationSpy1 = new FieldValidationSpy('any_field')
+    fieldValidationSpy1.error = Error('first_error_message')
     const fieldValidationSpy2 = new FieldValidationSpy('any_field')
-    fieldValidationSpy2.error = Error('any_error_message')
+    fieldValidationSpy2.error = Error('second_error_message')
     const sut = makeSut([
-      fieldValidationSpy,
+      fieldValidationSpy1,
       fieldValidationSpy2
     ])
     const error = sut.validate('any_field', 'any_value')
-    expect(error).toBe('any_error_message')
+    expect(error).toBe('first_error_message')
   })
 })
